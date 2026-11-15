@@ -1,0 +1,1 @@
+import{get,orgUrl}from'./axiosInstance';const b=orgUrl('');export const obligationApi={marginCalls:()=>get(b+'/margin-calls'),recalls:()=>get(b+'/recalls'),returns:()=>get(b+'/returns'),defaults:()=>get(b+'/defaults'),buyIns:()=>get(b+'/buy-ins')}
