@@ -1,0 +1,1 @@
+import{obligationApi}from'../../api/obligationApi';import ResourcePage from'../../components/common/ResourcePage';export default function ReturnsRecalls(){return <ResourcePage title="Returns & recalls" description="Manage securities returns, lender recalls and settlement obligations" load={obligationApi.returns} tabs={['All','Returns','Recalls','Pending','Overdue']}/>}
