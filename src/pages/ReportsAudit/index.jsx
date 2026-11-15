@@ -1,0 +1,1 @@
+import{organizationApi}from'../../api/organizationApi';import ResourcePage from'../../components/common/ResourcePage';export default function ReportsAudit(){return <ResourcePage title="Reports & audit" description="Review borrower operational audit events and activity records" load={organizationApi.audit} tabs={['All','User','Agreement','Trading','Funding']}/>}
