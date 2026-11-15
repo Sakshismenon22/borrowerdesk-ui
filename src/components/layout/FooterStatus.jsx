@@ -1,1 +1,1 @@
-import{ORG_ID}from'../../api/apiClient';export default function FooterStatus({error}){return <footer className="footer-status"><span><i className={error?'offline':''}/> Borrower service {error?'unavailable':'connected'}</span><span><i/> FIX session status not exposed</span><span>Organization ID: {ORG_ID}</span></footer>}
+export default function FooterStatus(){return <footer className="footer-status"><span><i/> Borrower service · API data loaded per endpoint</span><span><i/> FIX session status not exposed by borrower API</span></footer>}
