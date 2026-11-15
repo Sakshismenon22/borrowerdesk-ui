@@ -14,6 +14,7 @@ export const tradingDeskApi={
  positions:()=>get(base+'/positions'),
  holdings:()=>get(base+'/holdings'),
  loans:()=>get(base+'/loans?page=0&size=100'),
+ collateral:()=>get(base+'/collateral'),
  account:()=>get(base+'/account'),
  dashboard:()=>get(base+'/dashboard'),
  placeOrder:payload=>post(base+'/orders',payload),
