@@ -1,0 +1,1 @@
+import{billingApi}from'../../api/billingApi';import ResourcePage from'../../components/common/ResourcePage';export default function FeesRebates(){return <ResourcePage title="Fees & rebates" description="Review accrued lending fees, rebates and settlement payments" load={billingApi.accruals} tabs={['All','Accrued','Pending','Paid','Settled']}/>}
