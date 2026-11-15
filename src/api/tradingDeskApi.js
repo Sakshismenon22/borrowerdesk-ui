@@ -7,7 +7,6 @@ export const tradingDeskApi={
  watchlist:()=>get(base+'/watchlist'),
  addWatch:id=>put(base+'/watchlist/'+id,{}),
  removeWatch:id=>del(base+'/watchlist/'+id),
- currentPrices:()=>marketGet('/api/v1/securities-current-price/get-all-securities-current-prices'),
  candles:(symbol,exchange)=>marketGet('/api/v1/security-data/history?symbol='+encodeURIComponent(symbol)+'&exchange='+encodeURIComponent(exchange)),
  orders:()=>get(base+'/orders?page=0&size=100'),
  trades:()=>get(base+'/trades?page=0&size=100'),
