@@ -15,7 +15,7 @@ const filtered=rows.filter(r=>!search||JSON.stringify(r).toLowerCase().includes(
 const cols=useMemo(()=>{let a=[];filtered.slice(0,12).forEach(r=>Object.keys(r||{}).forEach(k=>{if(!a.includes(k)&&!['createdAt','updatedAt'].includes(k))a.push(k)}));return a.slice(0,10)},[filtered]);
 const count=re=>rows.filter(r=>re.test(String(r.status||r.state||''))).length;
 const stats=[['Records',rows.length],['Active',count(/active|approved|settled|open/i)],['Pending',count(/pending|requested|proposed/i)],['Exceptions',count(/overdue|shortfall|expired|rejected/i)]];
-const actions={blotter:['New borrow request'],trading:['Place order'],locates:['New locate request'],reservations:['Release reservation'],loans:['Request return','Post collateral'],collateral:['Post collateral'],margin:['Post collateral'],funding:['Add funds','Request withdrawal'],fees:[],returns:['Request return'],agreements:['New agreement'],reports:[]}[page];
+const actions={blotter:['New locate request'],trading:['Place order'],locates:['New locate request'],reservations:['Release reservation'],loans:['Request return','Post collateral'],collateral:['Post collateral'],margin:['Post collateral'],funding:['Add funds','Request withdrawal'],fees:[],returns:['Request return'],agreements:['New agreement'],reports:[]}[page];
 const detail=selected?Object.entries(selected).filter(([k,v])=>v!=null&&typeof v!=='object').slice(0,18):[];
 async function submit(e){e.preventDefault();let p='',b={...form};try{
 if(modal==='New locate request'){p=orgPath('/locates');b={securityId:+b.securityId,quantity:+b.quantity,maxFeeBps:+b.maxFeeBps,tenorDays:+b.tenorDays,purpose:b.purpose||'BORROW'}}
