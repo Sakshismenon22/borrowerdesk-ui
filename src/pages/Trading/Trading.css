@@ -7,3 +7,10 @@
 .trade-market-panel>.trading-chart-area{display:flex;flex:1 1 0;width:100%;min-width:0;min-height:0;}
 .trade-market-panel>.trading-chart-area>.trade-chart-shell{display:flex;flex:1 1 0;width:100%;min-width:0;min-height:0;}
 .trade-market-panel .lightweight-chart{display:block;flex:1 1 0;width:100%;min-width:0;min-height:0;}
+
+/* Size the Lightweight Charts canvas from the full market panel width. */
+.trade-market-panel{width:100%;}
+.trade-market-panel>.trading-chart-area{width:100%;align-self:stretch;}
+.trade-market-panel .trade-chart-shell{width:100%;max-width:none;align-self:stretch;}
+.trade-market-panel .lightweight-chart{width:100%!important;max-width:none;align-self:stretch;}
+.trade-market-panel .lightweight-chart canvas{max-width:none;}
