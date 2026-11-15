@@ -1,0 +1,1 @@
+import{get,post,orgUrl}from'./axiosInstance';const b=orgUrl('');export const billingApi={fees:()=>get(b+'/fees'),rebates:()=>get(b+'/rebates'),rebatePayments:()=>get(b+'/rebate-payments'),accruals:()=>get(b+'/accruals'),loanBilling:(id,r)=>get(b+'/loans/'+id+'/'+r),payFee:(id,key)=>post(b+'/fees/'+id+'/payments',{}, {'Idempotency-Key':key})}
