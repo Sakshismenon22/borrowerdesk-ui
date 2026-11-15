@@ -1,0 +1,1 @@
+import{obligationApi}from'../../api/obligationApi';import ResourcePage from'../../components/common/ResourcePage';export default function MarginCalls(){return <ResourcePage title="Margin calls" description="Monitor collateral shortfalls, due dates and top-up obligations" load={obligationApi.marginCalls} tabs={['All','Open','Due','Overdue','Resolved']}/>}
