@@ -1,0 +1,1 @@
+import{collateralApi}from'../../api/collateralApi';import ResourcePage from'../../components/common/ResourcePage';export default function Collateral(){return <ResourcePage title="Collateral allocations" description="Manage collateral pledges, substitutions and releases against active loans" load={collateralApi.list} tabs={['All','Active','Pending','Released']}/>}
